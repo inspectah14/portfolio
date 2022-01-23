@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c08e8e6912.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kontakta Oss</title>
+  </head>
+  <body>
+    <div class="container contact">
+      <header class="header">
+        <div class="top-wrapper">
+          <div class="logo">
+            <a href="home.html"> <i class="fas fa-box-open"></i> </a>
+          </div>
+          <div class="hamburger">
+            <a
+              href="#"
+              id="hamburger-menu"
+              class="icon contact"
+              aria-label="Klicka för att öppna navigation"
+            >
+              <i id="hamburger-icon" class="fa fa-bars"></i>
+              <i id="close-menu-icon" class="fas fa-times hide"></i>
+            </a>
+          </div>
+        </div>
+        <nav class="nav" id="my-nav">
+          <a class="hide" href="about.html">Om Oss</a>
+          <a class="hide" href="testimonials.html">Referenser</a>
+          <a class="hide" href="contact.html" id="current-page">Kontakt</a>
+        </nav>
+      </header>
+      <main class="main contact">
+        <section class="section contact">
+          <div class="contact-heading-container">
+            <h1 class="heading">kontakta oss</h1>
+          </div>
+          <div class="contact-flex-container">
+            <div class="contact-img-container">
+              <img
+                src="employees/flyttarna-office.jpeg"
+                alt="byggnadsfasad"
+              />
+            </div>
+            <div class="contact-container">
+              <div class="contact-info">
+                <div class="contact-adress">
+                  <p class="adress-text">
+                    Tomtebodavägen 3B <br />
+                    171 65 Solna
+                  </p>
+                </div>
+                <div class="contact-email-tel">
+                  <p class="email-tel-text">
+                    boka@flyttarna.se <br />
+                    08 - 01 02 03
+                  </p>
+                </div>
+              </div>
+              <div class="contact-form-container">
+                <form class="contact-form">
+                  <input type="text" name="name" id="name" placeholder="Namn" aria-label="skriv ditt namn"/>
+                  <input type="email" name="email" id="email" placeholder="Email" aria-label="skriv din email"/>
+                  <select name="topics" id="topics" aria-label="välj ett ämne ur menyn">
+                    <option value="" disabled selected hidden>Välj ämne</option>
+                    <option value="purchase">Köp av tjänst</option>
+                    <option value="question">Frågor om företaget</option>
+                    <option value="feedback">Synpunkter på webbplats</option>
+                  </select>
+                  <input type="text" name="message" id="message" placeholder="Meddelande" aria-label="skriv meddelande"/>
+                </form>
+              </div>
+              <div class="contact-button-container">
+                <button type="submit" class="contact-submit-button" id="contactSubmit">
+                  Skicka
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer contact-footer">
+      <nav>
+        <a href="home.html" class="footerlink">Hem</a>
+        <a href="about.html" class="footerlink">Om oss</a>
+        <a href="testimonials.html" class="footerlink">Referenser</a>
+        <a href="contact.html" class="footerlink current-page">Kontakt</a>
+      </nav>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+  * {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  background: whitesmoke;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: initial;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($wrap, $direction, $justify, $align) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;  
+}
+
+@mixin styled-links {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+  font-weight: 400;
+
+  &:hover {
+    font-weight: 700;
+  }
+}
+
+@mixin background-img-styling {
+  background-color: $bottle-green-light;
+  background-position: center;
+  background-size: cover;
+}
+
+$text-container-color: rgba(255,255,255,0.8);
+$bottle-green-dark: rgb(19, 87, 76);
+$bottle-green-light: rgb(43, 170, 149);
+$heading-font: 'Open Sans', Arial, sans-serif;
+
+.wrapper {
+  @include flex(nowrap, column, flex-start, stretch);
+
+  .header {
+    width: 100%;
+    background:$bottle-green-dark;
+    padding: 20px 0 10px 0;
+    color: white;
+    @include flex(nowrap, column, center, center);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    // För att hamburgaren ska täcka hela skärmen vid öppen. Kopplat till rad 132 samt JS.
+    // &.show-background {
+    //   height: 100vh;
+    //   width: 100vh;
+    //   @include flex(nowrap, column, flex-start, start);
+    // }
+    
+    .top-wrapper {
+      @include flex(nowrap, row, space-between, center);
+
+      .logo img {
+          width: 70px;
+          height: 61px;
+      }
+    }
+
+    .nav {
+      @include flex(nowrap, column, space-around, center);
+      overflow: hidden;
+
+      @media (min-width: 600px) {
+        flex-direction: row;
+        margin-bottom: 0;
+        padding-bottom: 0px;
+        width: 80%;
+        
+        a {
+          display: initial;
+        }
+      }
+
+      #current-page {
+        font-weight: bold;
+      }
+    }
+
+    a {
+      @include styled-links;
+      color: white;
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    i {
+      font-size: 40px;
+    }
+
+    .hamburger {
+      margin-top: 20px;
+      @include flex(nowrap, column, initial, flex-end);
+      cursor: pointer;
+
+      @media (min-width: 600px) {
+        flex-direction: row;
+
+        a:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  // För att hamburgaren ska täcka hela skärmen vid öppen. Kopplat till rad 132 samt JS.
+  // .introduction,
+  // .content-heading,
+  // .main,
+  // .footer {
+  //   &.hide-background {
+  //     display: none;
+  //   }
+  // }
+
+  .introduction {
+    @include flex(nowrap, column, center, center);
+
+    .intro-heading {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .preamble-container {
+      max-width: 560px;
+      margin: 0 20px 0 20px;
+
+      .content-preamble {
+        font-size: 14px;
+        padding: 10px;
+        margin: 0 5px 0 5px;
+        text-align: justify;
+      }
+    }
+
+    .content-heading {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  .main {
+    @include flex-center;
+    
+    .flex-container {
+      width: 1000px;
+      @include flex-center;
+
+      .main-container {
+        width: 95%;
+        margin: 10px 10px 20px 10px;
+        border: 1px solid $bottle-green-dark;
+        border-radius: 5px;
+        padding: 10px 0 30px 0;
+
+        h4 {
+          margin: 15px 0 10px 0;
+          font-size: 16px;
+        }
+        
+        .topics-container {
+          width: 100%;
+          @include flex(wrap, row, space-around, center);
+
+          .article {
+            width: 270px;
+            height: 190px;
+            margin: 10px 0 10px 0;
+            transition: 0.2s;
+            background: $bottle-green-light;
+            border: 1px solid $bottle-green-light;
+            border-radius: 5px;
+            color: black;
+
+            &:hover {
+                background: $bottle-green-dark;
+                color: white;
+              }
+
+
+            .text-container {
+              padding-bottom: 10px;
+              width: 270px;
+              height: 130px;
+            }
+  
+            h5 {
+              margin: 20px 0 10px 0;
+              padding-top: 10px;
+              font-size: 14px;
+            }
+  
+            .article-paras {
+              font-size: 14px;
+              padding: 0 10px 0 10px;
+              margin: 0 5px 0 5px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background:$bottle-green-dark;
+    padding: 10px 0 15px 0;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+
+    .footer-text-wrapper {
+      @include flex(wrap, row, space-evenly, center);
+
+      .footer-text-container {
+        height: 96px;
+        width: 188px;
+
+        .footer-heading {
+          font-size: 16px;
+          margin: 15px 0 5px 0;
+          text-align: center;
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 2px;
+          text-align: center;
+        }
+  
+        p:last-of-type {
+          margin-bottom: 10px;
+        }
+
+        .fa {
+          padding: 8px;
+          font-size: 20px;
+          width: 20px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+
+        .fa-github {
+          background: white;
+          color: black;
+        }
+
+      }
+    }
+  }
+}
+
+.topics-container.resume a,
+.topics-container.html-css a,
+.topics-container.js a,
+.topics-container.index a {
+  text-decoration: none;
+}
+
+.introduction.index {
+  @include flex(wrap, row, center, center);
+  margin-bottom: 40px;
+
+  img {
+    width: 250px;
+    height: 300px;
+    object-fit:none;
+    object-position: 95% 42%;
+    border-radius: 5px;
+    margin: 35px 30px 0 0;
+  }
+
+  .intro-heading.index {
+    margin-bottom: 10px;
+  }
+
+}
+
+.introduction.resume {
+  @include flex(wrap, row, center, center);
+  margin-bottom: 30px;
+
+  img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: 5px;
+    margin: 35px 30px 0 0;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}

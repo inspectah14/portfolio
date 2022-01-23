@@ -54,6 +54,7 @@ $heading-font: 'Open Sans', Arial, sans-serif;
 
 .wrapper {
   @include flex(nowrap, column, flex-start, stretch);
+  height: 100vh;
 
   .header {
     width: 100%;

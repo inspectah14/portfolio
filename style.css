@@ -410,7 +410,13 @@ body {
   -o-object-position: 95% 42%;
      object-position: 95% 42%;
   border-radius: 5px;
-  margin: 35px 30px 0 0;
+  margin: 35px 0 0 0;
+}
+
+@media (min-width: 895px) {
+  .introduction.index img {
+    margin: 35px 30px 0 0;
+  }
 }
 
 .introduction.index .intro-heading.index {
@@ -444,7 +450,13 @@ body {
   -o-object-position: 50% 60%;
      object-position: 50% 60%;
   border-radius: 5px;
-  margin: 35px 30px 0 0;
+  margin: 35px 0 0 0;
+}
+
+@media (min-width: 945px) {
+  .introduction.resume img {
+    margin: 35px 30px 0 0;
+  }
 }
 
 .introduction.resume h2 {

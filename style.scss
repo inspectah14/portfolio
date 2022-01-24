@@ -304,7 +304,12 @@ $heading-font: 'Open Sans', Arial, sans-serif;
     object-fit:none;
     object-position: 95% 42%;
     border-radius: 5px;
-    margin: 35px 30px 0 0;
+    margin: 35px 0 0 0;
+
+    @media (min-width: 895px) {
+      margin: 35px 30px 0 0;
+    }
+
   }
 
   .intro-heading.index {
@@ -323,7 +328,12 @@ $heading-font: 'Open Sans', Arial, sans-serif;
     object-fit: cover;
     object-position: 50% 60%;
     border-radius: 5px;
-    margin: 35px 30px 0 0;
+    margin: 35px 0 0 0;
+
+    @media (min-width: 945px) {
+      margin: 35px 30px 0 0;
+    }
+
   }
 
   h2 {

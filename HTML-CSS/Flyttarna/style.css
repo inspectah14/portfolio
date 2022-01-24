@@ -233,7 +233,7 @@ body {
   width: 100vw;
   position: relative;
   background-size: cover;
-  background-image: url(/Portfolio/HTML-CSS/Flyttarna/background-image-desktop.png);
+  background-image: url(Flyttarna/background-image-desktop.png);
   background-position: 50% 10%;
 }
 

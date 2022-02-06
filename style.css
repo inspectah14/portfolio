@@ -347,8 +347,19 @@ body {
   text-align: center;
 }
 
-.wrapper .footer .footer-text-wrapper .footer-text-container p:last-of-type {
-  margin-bottom: 10px;
+.wrapper .footer .footer-text-wrapper .footer-text-container a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.wrapper .footer .footer-text-wrapper .footer-text-container a:hover {
+  font-weight: 700;
 }
 
 .wrapper .footer .footer-text-wrapper .footer-text-container .fa {

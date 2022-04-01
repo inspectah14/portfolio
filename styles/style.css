@@ -292,7 +292,7 @@ body {
 }
 
 .wrapper .main .flex-container .main-container .topics-container .article h5 {
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
   padding-top: 10px;
   font-size: 14px;
 }
@@ -415,11 +415,9 @@ body {
 
 .introduction.index img {
   width: 250px;
-  height: 300px;
-  -o-object-fit: none;
-     object-fit: none;
-  -o-object-position: 95% 42%;
-     object-position: 95% 42%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   margin: 35px 0 0 0;
 }
